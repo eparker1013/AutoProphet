@@ -1,4 +1,19 @@
+/* Color Scheme */
+
+:root {
+  --primary-color: #2B388F;
+  --secondary-color: #00878E;
+  --tertiary-color: #62C0C2;
+  --background-color: #FFFFFF;
+  --accent-color: #27A2CC;
+  --highlight-color: #FDCB50;
+  --text-color-dark: #000000;
+  --text-color-light: #FFFFFF;
+  --text-color-medium: #333333;
+}
+
 body {
+  background-color: var(--secondary-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,40 +22,108 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  padding: 15px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--text-color-light);
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+h2 {
+  color: var(--text-color-dark);
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+h3 {
+  color: var(--text-color-medium);
+}
+
+button {
+  background-color: var(--accent-color);
+  padding: 10px;
+  border: 0px;
+  cursor: pointer;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-ul.navigation li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
+.main {
+  display: flex;
+  min-height: 500px;
 }
 
-ul.navigation {
-  background-color: #111;
-  padding: 0px;
+.sidebar { 
+  width: 200px; 
+  min-height: 500px;
+  background-color: var(--primary-color);
+  transition: width 0.5s ease;
 }
 
-ul.navigation li a {
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
+.sidebar.collapsed { 
+  width: 40px;
 }
 
 .header {
+  text-align: center;
   padding: 0;
-  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.header.collapsed {
+  display: none;
+}
+
+.menu-items a:hover {
+  background-color: var(--accent-color);
+}
+
+.menu-items.collapsed a {
+  display: none;
+}
+
+.sidebar a {
+  color: var(--text-color-light);
+  font-weight: bold;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.toggle-sidebar {
+  color: var(--text-color-light);
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  width: 40px;
+}
+
+.toggle-sidebar:hover {
+  background-color: var(--tertiary-color);
+}
+
+.isActive{
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
 }
 
 .content {
-  background-color: #FFF;
-  padding: 0;
-  margin: 0;
-  /* padding-left: 20px; This line disturbs the flow of the page */ 
+  background-color: var(--background-color);
+  flex: 1;
+}
+
+.page {
+  padding: 20px;
 }
 
 .cardRow {
@@ -54,14 +137,7 @@ ul.navigation li a {
 
 .cardRow a {
     text-decoration: none;
-    color: #000;
-}
-
-.card {
-  max-width: 300px;
-  min-height: 300px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+    color: var(--text-color-dark);
 }
 
 .card:hover {
@@ -69,10 +145,47 @@ ul.navigation li a {
 }
 
 .cardHeader {
-  background-color: #CCC;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  border-radius: 10px 10px 0px 0px;
   padding: 20px;
 }
 
+.cardHeader h3 {
+  color: var(--text-color-light);
+}
+
 .cardContainer {
+  background-color: var(--tertiary-color);
   padding: 20px;
+}
+
+.priceSearchFormContainer{
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.priceSearchBar{
+  padding: 8px;
+  width: 400px;
+  border: 1px solid black;
+  height: 30px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.priceSearchButton{
+  height: 50px;
+  width: 50px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--text-color-light);
+  transition: 0.2s;
+}
+
+.priceSearchButton:hover{
+  background-color: var(--accent-color);
+  box-shadow: 5px 5px 5px 0px rgba(186,186,186,0.5);
 }
