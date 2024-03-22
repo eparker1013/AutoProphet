@@ -20,6 +20,12 @@ import Analysis from "./Analysis";
 import BuyReport from "./BuyReport";
 import Price from "./PriceVolume/Price";
 import Learn from "./Learn";
+import NewsListing from "./NewsListing";
+import NewsPage from "./NewsPage";
+import NewsSearchBar from "./NewsSearchBar";
+import TickerSearchBar from "./TickerSearchBar";
+import TimeSeriesChart from "./TimeSeriesChart";
+import TimeSeriesPage from "./TimeSeriesPage";
 
 class App extends Component {
     // --Code for collapsable menu--
