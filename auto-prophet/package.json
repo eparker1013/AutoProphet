@@ -18,7 +18,8 @@
     "react-scripts": "5.0.1",
     "recharts": "^2.12.2",
     "sqlite3": "^5.1.7",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "yfinance": "^0.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
